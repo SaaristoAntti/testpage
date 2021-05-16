@@ -21,7 +21,21 @@
     <div class="result-content">
         <p>To learn more about TestCafe, please visit:<br/>
         <a href="/testcafe">devexpress.github.io/testcafe</a></p>
+        <p id="box-4"></p>
     </div>
-   
+   <!-- <div id="box-4"></div> -->
+   <script>
+    var i = 0;
+    var delay = 3000;
+    var element = document.getElementById("box-4");
+    var interval = setInterval(function() {
+            if(i < 1){
+                  element.innerHTML += "<h1>delayed text after " + delay + "ms</h1>";
+                  } else {
+                clearInterval(interval);
+              }
+            i++;
+    },delay);
+    </script>
 </body>
 </html>
