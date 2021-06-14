@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="shortcut icon" href="/testcafe/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/example-page.css">
+    <link rel="stylesheet" href="css/thank-you.css">
+    <title>Tab test</title>
+</head>
+<body>
+    <div class="result-content">
+        <p><b>GOTHAM CITY</b><br/>
+        <p id="box-4"></p>
+    </div>
+   <!-- <div id="box-4"></div> -->
+   <script>
+    var i = 0;
+    var delay = 2000;
+    var element = document.getElementById("box-4");
+    var interval = setInterval(function() {
+            if(i < 1){
+                  element.innerHTML += "<h2>delayed text after " + delay + "ms</h2>";
+                  } else {
+                clearInterval(interval);
+              }
+            i++;
+    },delay);
+    </script>
+</body>
+</html>
