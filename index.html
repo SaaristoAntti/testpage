@@ -10,6 +10,23 @@
     <script src="content/jquery-1.12.4.min.js"></script>
     <script src="content/jquery-ui.min.js"></script>
     <script>
+        var example = ['AA', 'BB', 'CC', 'DD'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence").innerHTML = example[i];
+                    textSequence(++i);
+                }, 1000); // 1 second (in milliseconds)
+
+            } else if (example.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }
+    </script>
         $(function () {
             function refreshFeedbackFormState() {
                 if (document.querySelector("#tried-test-cafe").checked) {
@@ -166,6 +183,8 @@
 
     <p></p><form align="center" id="download-button" method="get" action="data/simple.pdf">
         <button type="submit">Download</button>
-     </form></p>
+     </form>
+    </p>
+    <div align="center" id="sequence"></div>
 </body>
 </html>
