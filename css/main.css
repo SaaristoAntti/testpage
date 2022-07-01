@@ -549,3 +549,10 @@ body {
 
 .doc-top-nav {
   display: none; }
+
+.image {
+  display: flex;
+  width: 640px;
+  justify-content: center;
+  border: 50px pink;
+}
